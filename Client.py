@@ -46,7 +46,7 @@ def query_dns_server(server_address, domain_name):
 
 if __name__ == "__main__":
     domain_name = input("Enter the domain name: ")
-    local_dns_server_address = ('127.0.0.1', 6053)
+    local_dns_server_address = ('54.205.107.129', 6053)
     response = query_dns_server(local_dns_server_address, domain_name)
 
     if response and response.answer == "NOT_FOUND":
