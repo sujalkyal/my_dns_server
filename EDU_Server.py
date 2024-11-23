@@ -29,7 +29,7 @@ class DNS_MESSAGE:
 def tld_server(port, domain_data):
     server = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     try:
-        server.bind(('127.0.0.1', port))
+        server.bind(('0.0.0.0', port))
         print(f"TLD Server is running on port {port}...")
 
         while True:

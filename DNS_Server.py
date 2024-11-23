@@ -58,7 +58,7 @@ def query_authoritative_server(tld, domain_name):
         print(f"No authoritative server found for TLD: {tld}")
         return None
 
-    server_address = ('127.0.0.1', AUTHORITATIVE_SERVERS[tld])
+    server_address = ('0.0.0.0', AUTHORITATIVE_SERVERS[tld])
     client = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     try:
         # Serialize the DNS_MESSAGE before sending
